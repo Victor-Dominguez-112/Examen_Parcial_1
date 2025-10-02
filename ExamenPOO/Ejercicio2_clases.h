@@ -12,7 +12,8 @@
 //2.6) 10 Puntos extra, usar la struct del otro ejercicio anterior para guardar los X, Y, Alto y Ancho.
 
 
-class Ejercicio2_clases
+class Rect
 {
+
 };
 
