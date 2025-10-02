@@ -2,6 +2,8 @@
 using namespace std;
 
 #include "Ejercicio1_Estructuras.h"
+#include "Ejercicio2_clases.h"
+
 
 int main()
 {
