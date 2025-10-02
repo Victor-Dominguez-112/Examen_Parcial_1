@@ -39,3 +39,4 @@ VectorDeValores::VectorDeValores()
 	}
 	cout << "Creacion de un vector con tamaño de " << TamanoArray << endl;
 }
+
