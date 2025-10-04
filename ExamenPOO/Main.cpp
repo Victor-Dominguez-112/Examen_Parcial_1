@@ -77,6 +77,62 @@ int main()
 	//3.10) Checar si ese puntero es igual a NULL y si sí lo es, entonces imprimir que esa variable es igual a NULL.
 	//3.11) Checar si el puntero de 3.7) es nullptr o NULL, y si no es ninguna de las dos, imprimir que esa variable no es nullptr ni NULL y que se debe tener cuidado de usar esa variable porque ya se borró la variable a donde apunta.
 
+	float* FloPtr = nullptr; //Creacion dell puntero float
+
+	//Pedir memoria y dar el valor de 7.77
+	FloPtr = new float;	//Pedimos espacio en la memoria
+	*FloPtr = 7.77;		//Guardamos el valor
+	cout << "Valor del puntero FloPtr es de: " << *FloPtr << endl;
+
+	float valor = 6.66; //Declaramos una variable float con valor de 6.66
+
+	FloPtr = &valor; //Hacemos que el puntero apunte a la dirección de valor
+
+	//Advertencia de memory leak
+	cout << "Cuidado, acabas de causar un memory leak" << endl; 
+
+	//Explicación memory leak
+	cout << "Esto es un memory leak porque se perdió la referencia a la memoria que se pidio con new" << endl;
+	cout << "Esa memoria ya no puede liberarse, porque el puntero ahora apunta a otro lugar." << endl;
+	cout << "Para evitar esto se debio liberar la memoria con delete ptr; antes de poder reasignarlo." << endl;
+
+	//Pedimos memoria dinámica y le asignamos un valor de 1984
+	FloPtr = new float;
+	*FloPtr = 1984;
+	cout << "Nuevo valor asignado al puntero FloPtr: " << *FloPtr << endl;
+
+	//Creamos un nuevo puntero que apunte al mismo lugar que el puntero FloPtr
+	float* NewPtr = FloPtr;
+	cout << "NewPtr apunta a sia el mismo valor que el puntero FloPtr: " << NewPtr << endl;
+
+	//Liberamos la memoria y lo colocamos como nullptr
+	delete FloPtr; //Libera la memoria
+	FloPtr = nullptr;
+	cout << "Se libero la memoria del puntero FloPtr y se le asigno el valor de nullptr" << endl;
+
+	//Checamos si FloPtr es igual a nullptr
+	if (FloPtr == nullptr)
+	{
+		cout << "El puntero FloPtr es de valor nullptr" << endl;
+	}
+
+	//Checamos si FloPtr es igual a NULL
+	if (FloPtr == NULL)
+	{
+		cout << "El puntero FloPtr es de valor NULL" << endl;
+	}
+
+	//Checamos si NewPtr es nullptr o NULL
+	if (NewPtr == nullptr || NewPtr == NULL)
+	{
+		cout << "El puntero NewPtr es del valor nullptr o NULL" << endl;
+	}
+	else
+	{
+		cout << "El puntero NewPtr no es nullptr o NULL" << endl;
+		cout << "Cuidado: el puntero NewPtr apunta a memoria que ya ha sido liberada" << endl;
+	}
+	cout << endl;
 	//Ejercicio 3		Ejercicio 3		Ejercicio 3
 
 	return 0;
