@@ -9,11 +9,11 @@
 #include <iostream>
 using namespace std;
 
-//Constructor con parametros
+//Constructor con parámetros
 VectorDeValores::VectorDeValores(float Myarray[], int tamano)
 {
 	TamanoArray = tamano;
-	PuntFloat = new float[TamanoArray]; //pediremos memoria para la variable TamanoArray
+	PuntFloat = new float[TamanoArray]; //pediremos memoria para la variable TamañoArray
 	for (int i = 0; i < TamanoArray; i++)
 	{
 		PuntFloat[i] = Myarray[i]; //Copiaremos los valores
@@ -24,11 +24,11 @@ VectorDeValores::VectorDeValores(float Myarray[], int tamano)
 //Destructor
 VectorDeValores::~VectorDeValores()
 {
-	delete[] PuntFloat; //Liberammos la memoria ocupada o eliminar
+	delete[] PuntFloat; //Liberamos la memoria ocupada o eliminar
 	cout << "Se elimino un vector con " << TamanoArray << " elementos" << endl;
 }
 
-//Contructor por defecto
+//Constructor por defecto
 VectorDeValores::VectorDeValores()
 {
 	TamanoArray = 2; //Damos un tamaño de 2
@@ -37,5 +37,5 @@ VectorDeValores::VectorDeValores()
 	{
 		PuntFloat[i] = 0; //Iniciamos en 0
 	}
-	cout << "Creacion de un vector con tamaño de " << TamanoArray << endl;
+	cout << "Creacion de un vector con tamano de " << TamanoArray << endl;
 }

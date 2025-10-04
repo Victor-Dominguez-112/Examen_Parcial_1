@@ -11,9 +11,33 @@
 //2.5) Hacer una función(método) llamada CheckOverlap que reciba dos Rect y regrese true si hay un traslape entre dichos Rect, es decir, si en al menos un punto ocupan el mismo espacio.De lo contrario, regresa false.Ejemplos: los rects{ X = 0, Y = 0, Alto = 5, Ancho = 5 } y{ X = 6, Y = 6, Alto = 5, Ancho = 5 } no se traslapan, mientras que{ X = 0, Y = 0, Alto = 5, Ancho = 5 } y{ X = 2, Y = 2, Alto = 2, Ancho = 2 } sí.También{ X = 0, Y = 0, Alto = 5, Ancho = 5 } y{ X = 1, Y = 1, Alto = 7.5, Ancho = 2 } se traslapan.Usen estos ejemplos en su código para demostrar que su función es correcta.
 //2.6) 10 Puntos extra, usar la struct del otro ejercicio anterior para guardar los X, Y, Alto y Ancho.
 
-
+//Declaracion de las funciones 
 class Rect
 {
+private:
+	float x; //Nuestra coordenada x
+	float y; //Nuestra coordenada y
+	float alto;  //Altura del rectangulo
+	float ancho; //Ancho del rectangulo
 
+public:
+	Rect(); //Constructor por defecto
+
+	Rect(float x1, float y1, float alto1, float ancho1); //Constructor con parametros
+
+	Rect(float alto1, float ancho1); //Constructor con solo parametros de altura y ancho
+
+	bool ImprimirRect(const Rect& rect1, float &finx, float &finy); //Impresion y calculo del rectangulo
+
+	bool CheckOverlap(const Rect& rect11, const Rect& rect2); //Revision del traslape
+
+	void Imprimir(); //Aux para valores del Rect
 };
 
+
+//https://www.youtube.com/watch?v=VrZOaNpbmcI
+// https://www.reddit.com/r/Cplusplus/comments/2kk77n/can_someone_explain_const_and/?tl=es-419
+//https://learn.microsoft.com/es-es/cpp/cpp/constructors-cpp?view=msvc-170
+//https://ants.inf.um.es/staff/jlaguna/tp/tutoriales/colisiones/index.html
+//https://developer.mozilla.org/es/docs/Games/Techniques/2D_collision_detection
+//https://learn.microsoft.com/es-es/cpp/cpp/destructors-cpp?view=msvc-170
