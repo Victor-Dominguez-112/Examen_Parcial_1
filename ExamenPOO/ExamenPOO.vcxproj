@@ -125,11 +125,13 @@
   <ItemGroup>
     <ClCompile Include="Ejercicio1_Estructuras.cpp" />
     <ClCompile Include="Ejercicio2_clases.cpp" />
+    <ClCompile Include="Ejercicio3_memoria_dinámica.cpp" />
     <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Ejercicio1_Estructuras.h" />
     <ClInclude Include="Ejercicio2_clases.h" />
+    <ClInclude Include="Ejercicio3_memoria_dinámica.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
