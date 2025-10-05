@@ -11,9 +11,9 @@ int main()
 	//Destructor por defecto
 	VectorDeValores Uno;
 	cout << "Vector De Valores numero Uno: ";
-	for (int i = 0; i < Uno.TamanoArray; i++)
+	for (int i = 0; i < Uno.tamanoArray; i++)
 	{
-		cout << Uno.PuntFloat[i] << " ";
+		cout << Uno.puntFloat[i] << " ";
 	}
 	cout << endl;
 
@@ -21,9 +21,9 @@ int main()
 	float array[3] = { 1.5,2.5,3.5 };
 	VectorDeValores Dos;
 	cout << "Vector De Valores numero Dos: ";
-	for (int i = 0; i < Dos.TamanoArray; i++)
+	for (int i = 0; i < Dos.tamanoArray; i++)
 	{
-		cout << Dos.PuntFloat[i] << " ";
+		cout << Dos.puntFloat[i] << " ";
 	}
 	cout << endl;
 	//Ejercicio 1		Ejercicio 1		Ejercicio 1 
@@ -63,6 +63,7 @@ int main()
 
 
 
+
 	//Ejercicio 3		Ejercicio 3		Ejercicio 3 
 	//3) Declarar un puntero a flotante y asignarle el valor nullptr.
 	//3.1) Pedir memoria dinámica para dicho puntero, y que dentro tenga el valor 7.77.
@@ -77,7 +78,7 @@ int main()
 	//3.10) Checar si ese puntero es igual a NULL y si sí lo es, entonces imprimir que esa variable es igual a NULL.
 	//3.11) Checar si el puntero de 3.7) es nullptr o NULL, y si no es ninguna de las dos, imprimir que esa variable no es nullptr ni NULL y que se debe tener cuidado de usar esa variable porque ya se borró la variable a donde apunta.
 
-	float* FloPtr = nullptr; //Creacion dell puntero float
+	float* FloPtr = nullptr; //Creación del puntero float
 
 	//Pedir memoria y dar el valor de 7.77
 	FloPtr = new float;	//Pedimos espacio en la memoria

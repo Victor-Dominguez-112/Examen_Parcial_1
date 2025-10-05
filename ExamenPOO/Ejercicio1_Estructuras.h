@@ -10,11 +10,11 @@
 
 struct VectorDeValores
 {
-	float* PuntFloat; //Puntero de tipo float
-	int TamanoArray;  //Tamaño del array
+	float* puntFloat; //Puntero de tipo float
+	int tamanoArray;  //Tamaño del array
 
 	//Declaración de las funciones 
-	VectorDeValores(float Myarray[], int tamano); //constructor (con parámetros)
+	VectorDeValores(float myArray[], int tamano); //constructor (con parámetros)
 
 	VectorDeValores();//constructor (por defecto)
 

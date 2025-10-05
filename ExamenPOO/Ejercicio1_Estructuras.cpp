@@ -10,32 +10,49 @@
 using namespace std;
 
 //Constructor con parámetros
-VectorDeValores::VectorDeValores(float Myarray[], int tamano)
+VectorDeValores::VectorDeValores(float myArray[], int tamano)
 {
-	TamanoArray = tamano;
-	PuntFloat = new float[TamanoArray]; //pediremos memoria para la variable TamañoArray
-	for (int i = 0; i < TamanoArray; i++)
+
+	if (tamano <= 0)
 	{
-		PuntFloat[i] = Myarray[i]; //Copiaremos los valores
+		cout << "ERROR: El tamaño del array debe de ser mayor que 0" << endl;
+		puntFloat = nullptr;
+		tamanoArray = 0;
+		return;
 	}
-	cout << "Creacion de un vector con " << TamanoArray << " elementos" << endl;
+
+	tamanoArray = tamano;
+	puntFloat = new float[tamanoArray]; //pediremos memoria para la variable TamañoArray
+	for (int i = 0; i < tamanoArray; i++)
+	{
+		puntFloat[i] = myArray[i]; //Copiaremos los valores
+	}
+	cout << "Creacion de un vector con " << tamanoArray << " elementos" << endl;
 }
 
 //Destructor
 VectorDeValores::~VectorDeValores()
 {
-	delete[] PuntFloat; //Liberamos la memoria ocupada o eliminar
-	cout << "Se elimino un vector con " << TamanoArray << " elementos" << endl;
+	if (puntFloat != nullptr)
+	{
+		cout << "Se elimino un vector con " << tamanoArray << " elementos" << endl;
+		delete[] puntFloat; //Liberamos la memoria ocupada o eliminar
+		puntFloat = nullptr;
+	}
+	else
+	{
+		cout << "No hay memoria por liberar ahora" << endl;
+	}
 }
 
 //Constructor por defecto
 VectorDeValores::VectorDeValores()
 {
-	TamanoArray = 2; //Damos un tamaño de 2
-	PuntFloat = new float[TamanoArray]; //pedimos la memoria
-	for (int i = 0; i < TamanoArray; i++)
+	tamanoArray = 2; //Damos un tamaño de 2
+	puntFloat = new float[tamanoArray]; //pedimos la memoria
+	for (int i = 0; i < tamanoArray; i++)
 	{
-		PuntFloat[i] = 0; //Iniciamos en 0
+		puntFloat[i] = 0; //Iniciamos en 0
 	}
-	cout << "Creacion de un vector con tamano de " << TamanoArray << endl;
+	cout << "Creacion de un vector con tamano de " << tamanoArray << endl;
 }
