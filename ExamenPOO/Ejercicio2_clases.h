@@ -34,6 +34,7 @@ public:
 	void Imprimir(); //Aux para valores del Rect
 };
 
+void EjecutarEjercicioRect();
 
 //https://www.youtube.com/watch?v=VrZOaNpbmcI
 // https://www.reddit.com/r/Cplusplus/comments/2kk77n/can_someone_explain_const_and/?tl=es-419

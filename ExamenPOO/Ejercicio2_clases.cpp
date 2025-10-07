@@ -76,3 +76,37 @@ void Rect::Imprimir()
 {
 	cout << "Rectangulo (X = " << x << ", Y =" << y << " Alto = " << alto << ", Ancho " << ancho << ")" << endl;
 }
+
+void EjecutarEjercicioRect()
+{
+	//Ejercicio 2		Ejercicio 2		Ejercicio 2 
+	cout << endl;
+	cout << endl;
+	Rect rect1;
+	rect1.Imprimir();
+
+	Rect rect2(0, 0, 5, 5);
+	rect2.Imprimir();
+
+	Rect rect3(10, 3);
+	rect3.Imprimir();
+
+	float finx, finy;
+	if (rect2.ImprimirRect(rect2, finx, finy))
+	{
+		cout << "El rectangulo terminara en (" << finx << ", " << finy << ")" << endl;
+	}
+
+	Rect a(0, 0, 5, 5);
+	Rect b(6, 6, 5, 5);
+	Rect c(2, 2, 2, 2);
+	Rect d(1, 1, 7.5, 2);
+
+	cout << "\nPruebas del traslape" << endl;
+	cout << "A Y B se traslapan " << (a.CheckOverlap(a, b) ? "SI" : "NO") << endl;
+	cout << "A Y C se traslapan " << (a.CheckOverlap(a, c) ? "SI" : "NO") << endl;
+	cout << "A Y D se traslapan " << (a.CheckOverlap(a, d) ? "SI" : "NO") << endl;
+	cout << endl;
+	cout << endl;
+	//Ejercicio 2		Ejercicio 2		Ejercicio 2 
+}

@@ -56,3 +56,27 @@ VectorDeValores::VectorDeValores()
 	}
 	cout << "Creacion de un vector con tamano de " << tamanoArray << endl;
 }
+
+void EjecutarEjercicioVectorDeValores()
+{
+	//Ejercicio 1		Ejercicio 1		Ejercicio 1 
+	//Destructor por defecto
+	VectorDeValores Uno;
+	cout << "Vector De Valores numero Uno: ";
+	for (int i = 0; i < Uno.tamanoArray; i++)
+	{
+		cout << Uno.puntFloat[i] << " ";
+	}
+	cout << endl;
+
+	// Destructor con parámetros
+	float array[3] = { 1.5,2.5,3.5 };
+	VectorDeValores Dos;
+	cout << "Vector De Valores numero Dos: ";
+	for (int i = 0; i < Dos.tamanoArray; i++)
+	{
+		cout << Dos.puntFloat[i] << " ";
+	}
+	cout << endl;
+	//Ejercicio 1		Ejercicio 1		Ejercicio 1
+}

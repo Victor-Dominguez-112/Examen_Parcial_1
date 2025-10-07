@@ -21,5 +21,7 @@ struct VectorDeValores
 	~VectorDeValores();//destructor
 };
 
+void EjecutarEjercicioVectorDeValores();
+
 //https://learn.microsoft.com/es-es/cpp/cpp/destructors-cpp?view=msvc-170
 //https://isocpp.org/wiki/faq/dtors
